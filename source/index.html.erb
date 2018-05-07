@@ -1,15 +1,27 @@
 ---
 title: Le Wagon - Middleman
 ---
-
-<div id="home">
+<div class="intro">
   <div class="home-content">
     <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
     <p class="about">
       <%= link_to "More about this template", "about.html" %>
     </p>
   </div>
+  <h1>Where can you find us?</h1>
+
+
+</div>
+
+
+<div id="home">
+  <ul class="list-inline">
+  <% %w(berlin shanghai paris tokyo rio).each do |city| %>
+    <li>
+      <img src="https://kitt.lewagon.com/placeholder/cities/<%= city %>" class="img-rounded" height="100px" >
+      <p><%= city.capitalize %></p>
+    </li>
+  <% end %>
+</ul>
+
 </div>
